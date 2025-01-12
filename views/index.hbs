@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptCoder</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <script async defer type="text/javascript" src="../public/js/script.js"></script>
+</head>
+<body>
+    <center><h1>CryptCoder</h1></center>
+
+    <div class="container">
+        <form>
+            <label for="inpCode">Enter your code below:</label><br>
+            <textarea name="inpCode" id="inpCode" rows="10" cols="50"></textarea>
+            <br><br>
+            <label for="inpEncoded">Encoded Text:</label><br>
+            <input type="text" name="inpEncoded" id="inpEncoded" readonly>
+            <button type="submit" id="btnEncode">Encode</button>
+            <br><br>
+            <label for="inpEncrypted">Encrypted Text:</label><br>
+            <input type="text" name="inpEncrypted" id="inpEncrypted" readonly>
+            <button type="submit" id="btnEncrypt">Encrypt</button>
+        </form>
+        
+        <form>
+            <label for="inpCryptCode">Evaluate Code:</label><br>
+            <input type="text" name="inpCryptCode" id="inpCryptCode">
+            <button type="submit" formaction="/eval" formmethod="POST" id="btnEval">EVALUATE</button>
+        </form>
+        
+        <form>
+            <label for="inpOrgCode">Original Code:</label><br>
+            <textarea name="inpOrgCode" id="inpOrgCode" rows="10" cols="50" readonly>{{decryptedText}}</textarea>
+        </form>
+    </div>
+</body>
+</html>
